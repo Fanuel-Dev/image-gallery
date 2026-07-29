@@ -50,5 +50,5 @@
 
 ### 1. Repository Clone
 ```bash
-git clone [https://github.com/yourusername/the-gallery.git](https://github.com/yourusername/the-gallery.git)
-cd the-gallery
+[git clone [https://github.com/yourusername/the-gallery.git](https://github.com/yourusername/the-gallery.git)
+cd the-gallery](https://github.com/Fanuel-Dev/image-gallery.git)
