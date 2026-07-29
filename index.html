@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>The <span>Gallery</span></h1>
+    <div class="toolbar">
+      <div class="search-box">
+        <span style="opacity:0.6">⌕</span>
+        <input id="searchInput" type="text" placeholder="Search captions or tags…">
+      </div>
+      <button class="btn" id="favToggle">☆ Favorites</button>
+      <button class="btn primary" id="addToggle">+ Add</button>
+    </div>
+  </header>
+
+  <div class="chips" id="chips"></div>
+
+  <div class="add-panel" id="addPanel">
+    <div class="add-row">
+      <input type="url" id="inUrl" placeholder="Image URL (https://...)">
+      <input type="text" id="inCaption" placeholder="Caption">
+    </div>
+    <div class="add-row">
+      <input type="text" id="inTags" placeholder="Tags, comma separated (e.g. landscape, dusk)">
+      <div class="file-row">
+        <span>or upload from your device:</span>
+        <input type="file" id="inFile" accept="image/*">
+      </div>
+    </div>
+    <div class="add-actions">
+      <span class="hint" id="addHint"></span>
+      <button class="btn" id="cancelAdd">Cancel</button>
+      <button class="btn primary" id="submitAdd">Hang it</button>
+    </div>
+  </div>
+
+  <div id="statusArea" class="status">Hanging your gallery…</div>
+  <div class="gallery" id="gallery" style="display:none;"></div>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose">✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev">‹</button>
+  <button class="lb-nav lb-next" id="lbNext">›</button>
+  <div class="lightbox-frame"><img id="lbImg" src="" alt=""></div>
+  <div class="lightbox-plaque">
+    <div class="cap" id="lbCap"></div>
+    <div class="tags" id="lbTags"></div>
+    <div class="lb-counter" id="lbCounter"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
